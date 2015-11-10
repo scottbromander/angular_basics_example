@@ -1,0 +1,8 @@
+<div class="container" ng-controller="WelcomeController">
+    <h1>{{heading + message}}</h1>
+    <input ng-model="note.name" type="text" placeholder="Enter your name">
+
+    <button ng-click="updateMessage(note)">Update</button>
+
+    <button ng-click="getData()">Get Data</button>
+</div>
