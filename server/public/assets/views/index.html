@@ -6,6 +6,7 @@
 
     <!--STYLES-->
     <link rel="stylesheet" href="/vendors/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/styles/style.css">
 
     <!--SCRIPTS-->
     <script type="text/javascript" src="/vendors/angular/angular.min.js"></script>
@@ -24,6 +25,10 @@
 
     <div class="container" ng-repeat="people in array">
         <p>{{people.name}}</p>
+    </div>
+
+    <div ng-repeat="person in people | orderBy: '-location' | limitTo: 3">
+        <app-info info="person"></app-info>
     </div>
 
 </body>

@@ -6,7 +6,7 @@ module.exports = function(grunt){
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             build: {
-                src: 'client/scripts/app.js',
+                src: 'client/scripts/*.js',
                 dest: 'server/public/assets/scripts/app.min.js'
             }
         },
@@ -32,7 +32,8 @@ module.exports = function(grunt){
                 expand: true,
                 cwd: 'client/views/',
                 src: [
-                    "index.html"
+                    "index.html",
+                    "profileInfo.html"
                 ],
                 "dest": "server/public/assets/views/"
             },
