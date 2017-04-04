@@ -28,7 +28,17 @@
     </div>
 
     <div ng-repeat="person in people | orderBy: '-location' | limitTo: 3">
-        <app-info info="person"></app-info>
+      <div class="well col-md-4">
+        <div>
+          <img ng-src="{{person.imgUrl}}">
+        </div>
+        <div>
+          <p>{{person.name}}</p>
+          <p>{{person.location}}</p>
+          <p>{{person.position}}</p>
+        </div>
+      </div>
+      <!-- <app-info info="person"></app-info> -->
     </div>
 
 </body>
